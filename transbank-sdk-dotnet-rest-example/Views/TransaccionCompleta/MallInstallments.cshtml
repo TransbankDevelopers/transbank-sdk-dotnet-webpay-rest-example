@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Transaccion Completa";
+}
+@{
+//var transactionsOutput = "";
+
+//foreach (var transaction in ViewBag.Details)
+//{
+//    transactionsOutput += "\t    {\n";
+//    transactionsOutput += string.Format("\t\t\"amount\": {0},\n", (object) transaction.Amount);
+//    transactionsOutput += string.Format("\t\t\"commerce_code\": {0},\n", (object) transaction.CommerceCode);
+//    transactionsOutput += string.Format("\t\t\"buy_order\": {0}\n", (object) transaction.BuyOrder);
+//    transactionsOutput += "\t    },\n";
+//}
+//transactionsOutput = transactionsOutput.Remove(transactionsOutput.LastIndexOf("\n"), transactionsOutput.Length - transactionsOutput.LastIndexOf("\n"));
+}
+<h2>@ViewBag.Title</h2>
+<h4>FullTransaction.Installments</h4>
+<pre style="background-color: lightyellow;">
+POST: https://webpay3gint.transbank.cl//rswebpaytransaction/api/webpay/v1.0/transactions/@ViewBag.Token
+    <code class="json">
+        {
+            "installments_number": "@ViewBag.Result."
+        }
+    </code>
+</pre>
+
+<h4>Response:</h4>
+<pre>
+<code>
+@ViewBag.Result.ToString()
+</code>
+</pre>
+
+<a href="javascript: document.globalForm.submit();" class="btn btn-primary">Definir Cuotas</a>
+@Html.ActionLink("Volver al inicio", "Index", "Home", null, new {@class = "btn btn-primary"})
+
+<script >
+document.globalForm.innerHTML += '<input type="hidden" name="id_query_installments" value="@ViewBag.SaveIdQueryInstallments" />'
+</script>
