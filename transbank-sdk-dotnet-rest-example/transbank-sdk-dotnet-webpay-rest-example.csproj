@@ -137,6 +137,8 @@
     <Content Include="Views\PatpassByWebpay\Commit.cshtml" />
     <Content Include="Views\PatpassByWebpay\Status.cshtml" />
     <Content Include="Views\PatpassByWebpay\RequestStatus.cshtml" />
+    <Content Include="Views\TransaccionCompleta\MallCreate.cshtml" />
+    <Content Include="Views\TransaccionCompleta\MallInstallments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\transbank-sdk-dotnet\Transbank\Transbank.csproj">
