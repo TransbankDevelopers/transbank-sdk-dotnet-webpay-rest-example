@@ -47,8 +47,8 @@ namespace transbanksdkdotnetrestexample.Controllers
             ViewBag.AuthorizationCode = result.AuthorizationCode;
             ViewBag.ResponseCode = result.ResponseCode;
             ViewBag.TbkUser = result.TbkUser;
-            ViewBag.CreditCardType = result.CardType;
-            ViewBag.LastFourCardDigits = result.CardNumber;
+            ViewBag.CreditCardType = result.CreditCardType;
+            ViewBag.LastFourCardDigits = result.LastFourCardDigits;
             ViewBag.Result = result;
             
             var urlHelper = new UrlHelper(ControllerContext.RequestContext);

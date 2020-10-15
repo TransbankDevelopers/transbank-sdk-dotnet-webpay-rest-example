@@ -20,7 +20,7 @@ PUT: https://webpay3gint.transbank.cl/rswebpaytransaction/api/webpay/v1.0/transa
 </code>
 </pre>
 
-@if (ViewBag.Result.ResponseCode == 0)
+@if (@ViewBag.ResponseCode == 0)
 {
     <p>Transacción confirmada con éxito.</p>
 }
